@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Sora';
+  src: url('../fonts/Sora-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('../fonts/Sora-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@keyframes fadeUp {
+  0%{transform: translateY(-10px); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes fadeLeft {
+  0%{transform: translateX(-10px); opacity: 0;}
+  100%{transform: translateX(0px); opacity: 1;}
+}
+
+@keyframes fadeRight {
+  0%{transform: translateX(10px); opacity: 0;}
+  100%{transform: translateX(0px); opacity: 1;}
+}
+
+.fade-up {
+  animation: fadeUp 0.3s linear;
+}
+
+.fade-left {
+  animation: fadeLeft 0.3s linear;
+}
+
+.fade-right {
+  animation: fadeRight 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora';
+}
+
+#app {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #FAFAFC;
+  color: #292D32;
+}
+
+.error.default-text {
+  color: #F30168;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.default-text {
+  font-size: 16px;
+}
+
+.default-text a {
+  color: #292D32;
+}
+
+.default-btn {
+  width: 100%;
+  height: 75px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  background-color: #F30168;
+  color: #fff;
+  transition: .3s;
+}
+
+.default-btn:hover {
+  background-color: #d8015e;
+}
+
+.help-text {
+  font-size: 18px;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

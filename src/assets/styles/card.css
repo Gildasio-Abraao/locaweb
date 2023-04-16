@@ -1,0 +1,154 @@
+.cards-container {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 35px;
+}
+
+.card {
+  width: 95%;
+  max-width: 370px;
+  position: relative;
+  padding: 45px;
+  background-color: #fff;
+}
+
+p {
+  font-size: 17px;
+}
+
+p,
+.card-title {
+  color: #666666;
+}
+
+.card-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+p.card-price {
+  font-size: 34px;
+  font-weight: 700;
+  color: #F30168;
+  text-align: center;
+  margin: 20px 0px 5px;
+}
+
+p.card-price span {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.card-rules p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card-recommendation {
+  border-top: 1px solid #C4C4C480;
+  border-bottom: 1px solid #C4C4C480;
+  padding: 20px 0px;
+  margin: 20px 0px;
+}
+
+.card-recommendation p {
+  width: 95%;
+  max-width: 210px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-case {
+  text-align: center;
+}
+
+.default-btn {
+  height: 60px;
+  width: 95%;
+  margin: 0px;
+}
+
+.topic-title {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.topic-item {
+  margin-top: 10px;
+}
+
+.pin {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.pin span {
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+
+.pin.most-used span {
+  background-color: #10C300;
+}
+
+.pin.selected-plan span {
+  background-color: #000000;
+}
+
+.selected-plan-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.selected-plan-container::after {
+  content: '';
+  width: 95%;
+  height: 280px;
+  background: linear-gradient(0deg, #fff 46%, transparent);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+.change-plan {
+  position: absolute;
+  bottom: 30px;
+  z-index: 9999;
+  width: 95%;
+  text-align: center;
+}
+
+.change-plan .default-btn {
+  width: 95%;
+  max-width: 230px;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+@media(max-width: 1110px) {
+  .selected-plan-container {
+    height: 390px;
+  }
+}
+
+@media(max-width: 815px) {
+  .cards-container {
+    justify-content: center;
+  }
+}

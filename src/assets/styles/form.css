@@ -1,0 +1,50 @@
+.form-container {
+  width: 95%;
+  max-width: 620px;
+  border-radius: 5px;
+  border: 1px solid #E6EAF2;
+  color: #292D32;
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 28px 35px 35px;
+}
+
+form {
+  margin-top: 5px;
+}
+
+.input-group {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 26px 16px;
+  border: 1px solid #515D7480;
+  border-radius: 5px;
+  color: #292D32;
+  font-size: 16px;
+  outline: none;
+  margin: 1px 0px;
+}
+
+.input-group input::placeholder {
+  color: #292D32;
+}
+
+.input-group input.invalid {
+  border: 1px solid #ff222280;
+}
+
+.reset-pass {
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.reset-pass a {
+  text-decoration: none;
+  color: #515D74;
+  font-size: 16px;
+}
