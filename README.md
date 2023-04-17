@@ -5,6 +5,11 @@
 npm install
 ```
 
+### Run Unit Tests
+```
+npm run test:unit
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -15,7 +20,7 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+Site benchmark:
+
+
+![Site Benchmark](./benchmark.png)
