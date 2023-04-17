@@ -9,7 +9,14 @@
     <form @submit.prevent="login()">
       <div class="input-group">
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Seu e-mail" name="email" v-model="email" :class="{ invalid: v$.email.$error }">
+        <input
+          type="email"
+          placeholder="Seu e-mail"
+          name="email"
+          v-model="email"
+          :class="{ invalid: v$.email.$error }"
+          id="email"
+        >
         <p class="help-text error" v-if="v$.email.$error">
           <span v-for="(error, index) in v$.email.$errors" :key="index">Insira um e-mail válido</span>
         </p>
@@ -17,7 +24,14 @@
       </div>
       <div class="input-group">
         <label for="password">Senha</label>
-        <input type="password" placeholder="Sua senha" name="email" v-model="password" :class="{ invalid: v$.password.$error }">
+        <input
+          type="password"
+          placeholder="Sua senha"
+          name="password"
+          v-model="password"
+          :class="{ invalid: v$.password.$error }"
+          id="password"
+        >
         <p class="help-text error" v-if="v$.password.$error">
           <span v-for="(error, index) in v$.password.$errors" :key="index">Insira uma senha válida</span>
         </p>
@@ -28,6 +42,8 @@
       <button type="submit" class="default-btn">Fazer Login</button>
     </form>
   </div>
+
+  <div class="help-text">Ainda não tem conta? <a href="/choose-a-plan">Cadastre-se</a></div>
 </template>
 
 <script>
@@ -97,5 +113,9 @@ export default {
 
 .help-text.error {
   font-size: 14px;
+}
+
+.help-text a {
+  color: #F30168;
 }
 </style>

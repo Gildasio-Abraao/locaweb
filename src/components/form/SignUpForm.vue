@@ -11,7 +11,14 @@
       <form method="post" @submit.prevent="signUp()">
         <div class="input-group">
           <label for="nome">Nome completo</label>
-          <input type="text" placeholder="Informe seu nome completo" name="username" v-model="username" :class="{ invalid: v$.username.$error }">
+          <input
+            type="text"
+            placeholder="Informe seu nome completo"
+            name="username"
+            v-model="username"
+            :class="{ invalid: v$.username.$error }"
+            id="username"
+          >
           <p class="help-text error" v-if="v$.username.$error">
             <span v-for="(error, index) in v$.username.$errors" :key="index">{{ error.$message }};</span>
           </p>
@@ -19,7 +26,14 @@
 
         <div class="input-group">
           <label for="celular">Celular</label>
-          <input type="text" placeholder="(99) 99999-0000" name="phone" v-model="phone" :class="{ invalid: v$.phone.$error }">
+          <input
+            type="text"
+            placeholder="(99) 99999-0000"
+            name="phone" 
+            v-model="phone"
+            :class="{ invalid: v$.phone.$error }"
+            id="phone"
+          >
           <p class="help-text error" v-if="v$.phone.$error">
             <span v-for="(error, index) in v$.phone.$errors" :key="index">{{ error.$message }};</span>
           </p>
@@ -28,7 +42,14 @@
 
         <div class="input-group">
           <label for="email">E-mail</label>
-          <input type="email" placeholder="Informe seu e-mail" name="email" v-model="email" :class="{ invalid: v$.email.$error }">
+          <input
+            type="email"
+            placeholder="Informe seu e-mail"
+            name="email"
+            v-model="email"
+            :class="{ invalid: v$.email.$error }"
+            id="email"
+          >
           <p class="help-text error" v-if="v$.email.$error">
             <span v-for="(error, index) in v$.email.$errors" :key="index">{{ error.$message }};</span>
           </p>
@@ -36,7 +57,13 @@
 
         <div class="input-group">
           <label for="password">Senha</label>
-          <input type="password" name="password" v-model="password" :class="{ invalid: v$.password.$error }">
+          <input
+            type="password"
+            name="password"
+            v-model="password"
+            :class="{ invalid: v$.password.$error }"
+            id="password"
+          >
           <p class="help-text error" v-if="v$.password.$error">
             <span v-for="(error, index) in v$.password.$errors" :key="index">{{ error.$message }};</span>
           </p>
@@ -45,7 +72,13 @@
 
         <div class="input-group">
           <label for="confirm-password">Confirme sua senha</label>
-          <input type="password" name="confirm-password" v-model="confirmPassword" :class="{ invalid: v$.confirmPassword.$error }">
+          <input
+            type="password"
+            name="confirm-password"
+            v-model="confirmPassword"
+            :class="{ invalid: v$.confirmPassword.$error }"
+            id="confirm-password"
+          >
           <p class="help-text error" v-if="v$.confirmPassword.$error">
             <span v-for="(error, index) in v$.confirmPassword.$errors" :key="index">{{ error.$message }};</span>
           </p>
@@ -55,7 +88,14 @@
           <h1 class="title">Dados do seu site</h1>
           <div class="input-group">
             <label for="nome-site">Nome do seu site</label>
-            <input type="text" placeholder="Meu site" name="nome-site" v-model="site" :class="{ invalid: v$.site.$error }">
+            <input
+              type="text"
+              placeholder="Meu site"
+              name="nome-site"
+              v-model="site"
+              :class="{ invalid: v$.site.$error }"
+              id="site-name"
+            >
             <p class="help-text error" v-if="v$.site.$error">
               <span v-for="(error, index) in v$.site.$errors" :key="index">{{ error.$message }};</span>
             </p>
@@ -64,10 +104,9 @@
         </div>
 
         <div class="input-group flex">
-          <input type="checkbox" name="terms" v-model="terms" required>
+          <input type="checkbox" name="terms" v-model="terms" id="terms" required>
           <p class="default-text">
-            Ao concluir com seu cadastro você concorda com nossos <a href="#">termos de uso</a> e <a href="#">politicas de
-              privacidade</a>.
+            Ao concluir com seu cadastro você concorda com nossos <a href="#">termos de uso</a> e <a href="#">politicas de privacidade</a>.
           </p>
         </div>
 
@@ -168,7 +207,7 @@ export default {
     },
 
     setSelectedPlanId() {
-      this.selectedPlanId = this.$route.params.id;
+      this.selectedPlanId = this.$route?.params?.id || 1;
     }
   },
   mounted() {

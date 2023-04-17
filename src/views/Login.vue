@@ -2,7 +2,6 @@
   <div class="home">
     <img src="@/assets//images/logo.svg" alt="logo" class="logo">
     <LoginForm />
-    <div class="help-text">Ainda não tem conta? <a href="/choose-a-plan">Cadastre-se</a></div>
   </div>
 </template>
 
@@ -16,9 +15,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.help-text a {
-  color: #F30168;
-}
-</style>
